@@ -25,10 +25,8 @@ jobs:
           distribution: 'adopt'
       - name: Build and Test Project
         run: mvn -B verify
-      - name: Install tree cmd
-        run: apt install tree -y
-      - name: List files
-        run: tree -d /Akasuki/
+      - name: ls all files
+        run: ls * akasuki/
       - name: Upload Maven Build Artifact
         uses: actions/upload-artifact@v2
         with:
