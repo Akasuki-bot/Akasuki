@@ -25,10 +25,10 @@ jobs:
           distribution: 'adopt'
       - name: Build and Test Project
         run: mvn -B verify
-      - name: ls all files
+      - name: Ls all files
         run: ls *
       - name: Upload Maven Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          path: target/([a-zA-Z0-9\s_\\.\-\(\):])+.jar$
+          path: target/
           if-no-files-found: error
