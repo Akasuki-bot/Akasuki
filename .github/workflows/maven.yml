@@ -25,8 +25,12 @@ jobs:
           distribution: 'adopt'
       - name: Build and Test Project
         run: mvn -B verify
+      - name: Install tree cmd
+        run: apt install tree -y
+      - name: List files
+        run: tree -d /Akasuki/
       - name: Upload Maven Build Artifact
         uses: actions/upload-artifact@v2
         with:
           path: /Akasuki/target/Akasuki - 2.3.0-ALPHA.jar
-          if-no-files-found: error
+          if-no-files-found: warn
