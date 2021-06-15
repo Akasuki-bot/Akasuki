@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ls all files
-          run: ls *
+        run: ls *
       - name: Checkout Source Code
         uses: actions/checkout@v2
       - name: Ls all files
