@@ -26,9 +26,9 @@ jobs:
       - name: Build and Test Project
         run: mvn -B verify
       - name: ls all files
-        run: ls * akasuki/
+        run: ls *
       - name: Upload Maven Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          path: /Akasuki/target/Akasuki - 2.3.0-ALPHA.jar
+          path: /target/Akasuki - 2.3.0-ALPHA.jar
           if-no-files-found: warn
