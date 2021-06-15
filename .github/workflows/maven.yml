@@ -43,5 +43,5 @@ jobs:
       - name: Upload Maven Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          path: /home/runner/work/Akasuki/Akasuki/target/Akasuki-?.jar
+          path: /home/runner/work/Akasuki/Akasuki/target/Akasuki?
           if-no-files-found: error
