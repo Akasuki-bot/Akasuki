@@ -28,5 +28,5 @@ jobs:
       - name: Upload Maven Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          path: /Akasuki/target/Akasuki?
+          path: /Akasuki/target/Akasuki - 2.3.0-ALPHA.jar
           if-no-files-found: error
