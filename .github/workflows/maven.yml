@@ -48,19 +48,15 @@ jobs:
           path: target/
       - name: Ls all files
         run: ls *
-      - name: Move all files needed into the container image
-        run: |
-          echo "test1"
-          echo bonjour
-#      - name: Log in to GitHub Docker Registry
-#        uses: docker/login-action@v1
-#        with:
-#          registry: docker.pkg.github.com
-#          username: ${{ github.actor }}
-#          password: ${{ secrets.GITHUB_TOKEN }}
-#      - name: Build container image
-#        uses: docker/build-push-action@v2
-#        with:
-#          push: true
-#          tags: |
-#            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.sha }}
+      - name: Log in to GitHub Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: docker.pkg.github.com
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build container image
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: |
+            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.sha }}

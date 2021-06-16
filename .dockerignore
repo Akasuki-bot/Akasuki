@@ -1,0 +1,17 @@
+# Ignore Generated Sources
+*/generated*
+
+# Ignore Maven Generated Files
+*/maven*
+
+# Ignore raw classes folder
+*/classes*
+
+# Ignore surefire
+*/surefire*
+
+# Ignore tests
+*/test*
+
+# Ignore config files (there shouldn't be but in case)
+*/config*
